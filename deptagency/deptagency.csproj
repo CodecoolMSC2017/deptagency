@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="Model\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\ServiceImpl\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2">
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\MovieController.cs" />
+    <Compile Remove="Controllers\TrailerController.cs" />
+    <Compile Remove="Factory\IResultFactory.cs" />
+  </ItemGroup>
+</Project>
