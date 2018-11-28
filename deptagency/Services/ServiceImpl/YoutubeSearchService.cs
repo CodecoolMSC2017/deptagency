@@ -1,9 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using deptagency.Model;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json.Linq;
 
 namespace deptagency.Services.ServiceImpl
 {
-    public class YouTubeSearchService : ISearchService
+    public class YouTubeSearchService : ITrailerSearchService
     {
         private IConfiguration _configuration;
         private string youTubeApiUrl;

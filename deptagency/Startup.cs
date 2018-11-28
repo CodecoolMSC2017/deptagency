@@ -41,7 +41,8 @@ namespace deptagency
             })
                     .AddControllersAsServices();
 
-            services.AddTransient<ISearchService, SearchService>();
+            services.AddTransient<IMovieSearchService, OmdbSearchService>();
+            services.AddTransient<ITrailerSearchService, YouTubeSearchService>();
             services.AddTransient<IProduceContentService, ProduceContentService>();
 
         }
